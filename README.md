@@ -36,3 +36,83 @@ After extracting text, the analyzer evaluates:
 
 ##  Project Structure (Backend + Frontend)
 
+/backend
+    /controllers
+        analyzeController.js
+        ocrController.js
+        pdfController.js
+        uploadController.js
+
+    app.js
+    routes.js
+
+/frontend
+    /src
+        /components
+            FileDrop.js
+            Progress.js
+            ResultPanel.js
+        /pages
+            Home.js
+        /services
+            apis.js
+        /utils
+            textUtils.js
+        App.js
+
+##  Tech Stack Used
+
+### Frontend
+- React 
+- JavaScript
+- HTML/CSS
+- Axios / XHR
+
+### Backend
+- Node.js
+- Express.js
+- Multer (file uploads)
+- pdf-parse
+- tesseract.js
+- CORS
+
+---
+
+##  How to Run the Project Locally  
+
+### Clone the repository
+git clone <your-repo-url>
+cd <project-folder>
+
+---
+
+##  Backend Setup
+cd backend
+npm install
+npm run dev
+
+---
+##  Frontend Setup
+cd frontend
+npm install
+npm run start
+
+
+---
+
+## Screenshots 
+
+
+### 1. Home Page UI
+![Home Page UI](./screenshot/image1.png)
+
+### 2. File Upload
+![File Upload](./screenshot/image2.png)
+
+### 3. Extracted Text Output
+![Extracted Text Output](./screenshot/image3.png)
+
+### 4. Analysis & Suggestions
+![Analysis & Suggestions](./screenshot/image4.png)
+
+ 

@@ -1,12 +1,13 @@
 
 export async function uploadFile(file, onProgress) {
   const form = new FormData();
+  const API_URL = "https://social-media-analyzer-jcxi.onrender.com";
 //   'file' naam ke field mein actual file attach kar rahe hai
   form.append('file', file);
 
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', (process.env.REACT_APP_API_URL || 'http://localhost:4000') + '/api/upload', true);
+    xhr.open('POST', `${API_URL}/api/upload`, true);
 
     xhr.onload = () => {
         //success code

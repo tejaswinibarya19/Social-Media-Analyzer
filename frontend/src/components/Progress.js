@@ -1,3 +1,5 @@
+// frontend/src/components/Progress.jsx
+import React from 'react';
 
 export default function Progress({ percent }) {
   return (

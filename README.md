@@ -2,6 +2,12 @@
 A simple web application that allows users to upload PDF files or images and extracts text from them using PDF parsing and OCR (Tesseract.js).  
 After extracting the text, the app gives **engagement improvement suggestions** for social media content.
 
+##  Approach
+In this project, I set out to create a lightweight yet effective application capable of extracting text from PDFs or images and offering helpful suggestions to improve the content. I focused on a modular design to ensure that both the backend and frontend stayed clean, maintainable, and easy to extend.
+
+On the backend, I built the server using Express.js and structured the logic into dedicated controllers and services. PDF files are processed with pdf-parse, while image-based text extraction is handled through Tesseract.js for OCR. File uploads are managed with Multer, and once the text is extracted, a custom analysis module reviews the content—checking word count, sentence quality, calls to action, and generating hashtag recommendations. All functionalities are exposed through routes under /api.
+
+For the frontend, I developed a simple and intuitive React interface that supports drag-and-drop uploads, displays real-time upload progress, and shows the extracted text along with the analysis results. The frontend sends files to the backend using XMLHttpRequest to track upload progress, and once the response is received, the UI presents the insights in a clear, organized layout.
 
 ##  Features
 

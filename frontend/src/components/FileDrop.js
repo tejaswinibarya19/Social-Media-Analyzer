@@ -1,3 +1,4 @@
+// frontend/src/components/FileDrop.jsx
 import React, { useCallback, useRef, useState } from 'react';
 
 export default function FileDrop({ onFileSelected, disabled }) {
@@ -15,46 +16,48 @@ export default function FileDrop({ onFileSelected, disabled }) {
     onFiles(ev.dataTransfer.files);
   }, [onFiles]);
 
-  const onDragOver = (e) => {
-      e.preventDefault();
-      if(!disabled) setIsDragOver(true);
-  }
-
-  const onDragLeave = () => setIsDragOver(false);
-
   const containerStyle = {
-    border: `2px dashed ${isDragOver ? '#4f46e5' : '#cbd5e1'}`,
-    background: isDragOver ? '#eef2ff' : '#f8fafc',
-    padding: '40px 20px',
+    border: `2px dashed ${isDragOver ? '#4f46e5' : '#e2e8f0'}`,
+    background: isDragOver ? '#eff6ff' : '#f8fafc',
+    padding: '60px 20px',
     borderRadius: '16px',
     textAlign: 'center',
     cursor: disabled ? 'default' : 'pointer',
     opacity: disabled ? 0.6 : 1,
-    transition: 'all 0.2s ease'
+    transition: 'all 0.2s ease',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   };
 
   return (
     <div>
       <div
-        onDragOver={onDragOver}
-        onDragLeave={onDragLeave}
+        onDragOver={(e) => { e.preventDefault(); if(!disabled) setIsDragOver(true); }}
+        onDragLeave={() => setIsDragOver(false)}
         onDrop={onDrop}
         style={containerStyle}
         onClick={() => !disabled && fileRef.current.click()}
       >
-        
-        <div style={{ color: isDragOver ? '#1a1399ff' : '#01060eff', marginBottom: 12 }}>
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div style={{ 
+          background: isDragOver ? '#dbeafe' : 'white', 
+          padding: 16, 
+          borderRadius: '50%', 
+          marginBottom: 16,
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)'
+        }}>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={isDragOver ? '#4f46e5' : '#64748b'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="17 8 12 3 7 8"></polyline>
                 <line x1="12" y1="3" x2="12" y2="15"></line>
             </svg>
         </div>
         
-        <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#77c8e8ff' }}>
+        <p style={{ margin: '0 0 8px', fontWeight: 600, color: '#1e293b', fontSize: '1.1rem' }}>
             Click to upload or drag and drop
         </p>
-        <small style={{ color:  '#77c8e8ff' }}>PDF, PNG, JPG (max 20MB)</small>
+        <small style={{ color: '#94a3b8' }}>PDF, PNG, JPG (max 20MB)</small>
       </div>
       <input
         ref={fileRef}

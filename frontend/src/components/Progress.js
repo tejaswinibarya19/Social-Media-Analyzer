@@ -14,7 +14,7 @@ export default function Progress({ percent }) {
         <div style={{
           height: '100%',
           width: `${percent}%`,
-          background: 'linear-gradient(90deg, #4f46e5, #7c3aed)', // Gradient bar
+          background: 'linear-gradient(90deg, #4f46e5, #7c3aed)', 
           borderRadius: 99,
           transition: 'width 300ms cubic-bezier(0.4, 0, 0.2, 1)'
         }} />

@@ -36,33 +36,37 @@ After extracting text, the analyzer evaluates:
 
 ##  Project Structure (Backend + Frontend)
 
-/backend
-    /controllers
-        analyzeController.js
-        ocrController.js
-        pdfController.js
-        uploadController.js
+```
+backend
+│
+├── controllers
+│ ├── analyzeController.js
+│ ├── ocrController.js
+│ ├── pdfController.js
+│ └── uploadController.js
+│
+├── app.js
+└── routes.js
 
-    app.js
-    routes.js
-
-/frontend
-    /src
-        /components
-            FileDrop.js
-            Progress.js
-            ResultPanel.js
-
-        /pages
-            Home.js
-
-        /services
-            apis.js
-
-        /utils
-            textUtils.js
-
-        App.js
+frontend
+│
+└── src
+├── components
+│ ├── FileDrop.js
+│ ├── Progress.js
+│ └── ResultPanel.js
+│
+├── pages
+│ └── Home.js
+│
+├── services
+│ └── apis.js
+│
+├── utils
+│ └── textUtils.js
+│
+└── App.js
+```
 
 
 
@@ -130,4 +134,5 @@ After extracting text, the analyzer evaluates:
 <img src="./screenshot/image4.png" width="100%" />
 
  
+
 

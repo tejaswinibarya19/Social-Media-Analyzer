@@ -38,10 +38,10 @@ After extracting text, the analyzer evaluates:
 
 /backend
     /controllers
-        analyzeController.js
-        ocrController.js
-        pdfController.js
-        uploadController.js
+        ├── analyzeController.js
+        ├── ocrController.js
+        ├── pdfController.js
+        └── uploadController.js
 
     app.js
     routes.js
@@ -49,16 +49,21 @@ After extracting text, the analyzer evaluates:
 /frontend
     /src
         /components
-            FileDrop.js
-            Progress.js
-            ResultPanel.js
+            ├── FileDrop.js
+            ├── Progress.js
+            └── ResultPanel.js
+
         /pages
-            Home.js
+            └── Home.js
+
         /services
-            apis.js
+            └── apis.js
+
         /utils
-            textUtils.js
+            └── textUtils.js
+
         App.js
+
 
 ##  Tech Stack Used
 
@@ -81,8 +86,10 @@ After extracting text, the analyzer evaluates:
 ##  How to Run the Project Locally  
 
 ### Clone the repository
+```bash
 git clone <your-repo-url>
 cd <project-folder>
+
 
 ---
 
@@ -92,11 +99,11 @@ npm install
 npm run dev
 
 ---
+
 ##  Frontend Setup
 cd frontend
 npm install
 npm run start
-
 
 ---
 
@@ -104,15 +111,15 @@ npm run start
 
 
 ### 1. Home Page UI
-![Home Page UI](./screenshot/image1.png)
+screenshot/image1.png
 
 ### 2. File Upload
-![File Upload](./screenshot/image2.png)
+screenshot/image2.png
 
 ### 3. Extracted Text Output
-![Extracted Text Output](./screenshot/image3.png)
+screenshot/image3.png
 
 ### 4. Analysis & Suggestions
-![Analysis & Suggestions](./screenshot/image4.png)
+screenshot/image4.png
 
  

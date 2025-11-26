@@ -1,4 +1,4 @@
-// frontend/src/components/ResultPanel.jsx
+
 import React from 'react';
 import { normalizeTextForDisplay } from '../utils/textUtils';
 
@@ -8,7 +8,7 @@ export default function ResultPanel({ text, analysis, onApplyHashtags }) {
   return (
     <div className="result-section">
       <div style={{ marginBottom: 32 }}>
-        <h4 style={{ marginBottom: 16, color: '#374151', fontSize: '1.1rem' }}>Analysis Results</h4>
+        <h4 style={{ marginBottom: 16, color: '#fbfcfeff', fontSize: '1.1rem' }}>Analysis Results</h4>
         
         {/* Stats Grid */}
         <div className="stats-grid">
@@ -37,7 +37,7 @@ export default function ResultPanel({ text, analysis, onApplyHashtags }) {
       </div>
 
       <div style={{ marginBottom: 32 }}>
-        <h4 style={{ marginBottom: 16, color: '#374151', fontSize: '1.1rem' }}>Extracted Text</h4>
+        <h4 style={{ marginBottom: 16, color:  '#fbfcfeff', fontSize: '1.1rem' }}>Extracted Text</h4>
         <textarea
           readOnly
           className="text-display"
@@ -64,7 +64,7 @@ export default function ResultPanel({ text, analysis, onApplyHashtags }) {
       </div>
 
       <div>
-        <h4 style={{ marginBottom: 16, color: '#374151', fontSize: '1.1rem' }}>Hashtag Suggestions</h4>
+        <h4 style={{ marginBottom: 16, color: '#fbfcfeff', fontSize: '1.1rem' }}>Hashtag Suggestions</h4>
         <div className="hashtag-container">
           {analysis?.hashtagSuggestions?.map((h, i) => (
             <button key={i} onClick={() => onApplyHashtags && onApplyHashtags(h)} className="hashtag-pill">

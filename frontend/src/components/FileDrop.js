@@ -1,4 +1,4 @@
-// frontend/src/components/FileDrop.jsx
+
 import React, { useCallback, useRef, useState } from 'react';
 
 export default function FileDrop({ onFileSelected, disabled }) {

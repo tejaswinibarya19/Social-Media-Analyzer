@@ -1,4 +1,4 @@
-// frontend/src/pages/Home.jsx
+
 import React, { useState } from 'react';
 import FileDrop from '../components/FileDrop';
 import Progress from '../components/Progress';

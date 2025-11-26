@@ -36,12 +36,13 @@ After extracting text, the analyzer evaluates:
 
 ##  Project Structure (Backend + Frontend)
 
+\`\`\`
 /backend
     /controllers
-        ├── analyzeController.js
-        ├── ocrController.js
-        ├── pdfController.js
-        └── uploadController.js
+        analyzeController.js
+        ocrController.js
+        pdfController.js
+        uploadController.js
 
     app.js
     routes.js
@@ -49,20 +50,22 @@ After extracting text, the analyzer evaluates:
 /frontend
     /src
         /components
-            ├── FileDrop.js
-            ├── Progress.js
-            └── ResultPanel.js
+            FileDrop.js
+            Progress.js
+            ResultPanel.js
 
         /pages
-            └── Home.js
+            Home.js
 
         /services
-            └── apis.js
+            apis.js
 
         /utils
-            └── textUtils.js
+            textUtils.js
 
         App.js
+\`\`\`
+
 
 
 ##  Tech Stack Used
@@ -86,7 +89,7 @@ After extracting text, the analyzer evaluates:
 ##  How to Run the Project Locally  
 
 ### Clone the repository
-```bash
+
 git clone <your-repo-url>
 cd <project-folder>
 
@@ -110,16 +113,22 @@ npm run start
 ## Screenshots 
 
 
-### 1. Home Page UI
-screenshot/image1.png
+### 1.  Home Page UI
+<img src="./screenshot/image1.png" width="100%" />
 
-### 2. File Upload
-screenshot/image2.png
+---
 
-### 3. Extracted Text Output
-screenshot/image3.png
+### 2.  File Upload
+<img src="./screenshot/image2.png" width="100%" />
+---
 
-### 4. Analysis & Suggestions
-screenshot/image4.png
+### 3.  Extracted Text Output
+<img src="./screenshot/image3.png" width="100%" />
+
+---
+
+### 4.  Analysis & hashtags
+<img src="./screenshot/image4.png" width="100%" />
 
  
+

@@ -36,7 +36,6 @@ After extracting text, the analyzer evaluates:
 
 ##  Project Structure (Backend + Frontend)
 
-\`\`\`
 /backend
     /controllers
         analyzeController.js
@@ -64,7 +63,7 @@ After extracting text, the analyzer evaluates:
             textUtils.js
 
         App.js
-\`\`\`
+
 
 
 
@@ -90,23 +89,23 @@ After extracting text, the analyzer evaluates:
 
 ### Clone the repository
 
-git clone <your-repo-url>
-cd <project-folder>
+- git clone <your-repo-url>
+- cd <project-folder>
 
 
 ---
 
-##  Backend Setup
-cd backend
-npm install
-npm run dev
+###  Backend Setup
+- cd backend
+- npm install
+- npm run dev
 
 ---
 
-##  Frontend Setup
-cd frontend
-npm install
-npm run start
+###  Frontend Setup
+- cd frontend
+- npm install
+- npm run start
 
 ---
 
